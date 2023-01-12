@@ -1,8 +1,8 @@
-#Calendar App
+# Calendar App
 
 Proyecto creado a partir de React y Redux.
 
-##Development steps
+## Development steps
 
 1. Renombrar el archivo `.env.template` por `.env`.
 2. Hacer los cambios respectivos en el archivo `.env`.
@@ -16,6 +16,14 @@ yarn dev
 
 ```
 yarn build
+```
+5. Para la creación de los archivos de Service Worker utilizar el siguiente comando (Sólo para uso con el archivo 'workbox-config.cjs' de manera predeterminada):
+```
+workbox generateSW workbox-config.cjs
+```
+6. Para la creación de los archivos de Service Worker de manera manual mediante la creación del archivo 'sw-template':
+```
+workbox injectManifest workbox-config.cjs
 ```
 
 # Instalación y configuracion de Jest + React Testing Library

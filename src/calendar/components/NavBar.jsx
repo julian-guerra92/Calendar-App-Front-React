@@ -1,4 +1,5 @@
 import { useAuthStore } from '../../hooks/useAuthStore';
+import { Offline, Online } from 'react-detect-offline';
 
 export const NavBar = ({ onChangeLenguage }) => {
 
@@ -20,6 +21,14 @@ export const NavBar = ({ onChangeLenguage }) => {
             &nbsp;
             <span>Change Lenguage</span>
          </button>
+
+         <Online>
+            <span className='text-success'>Online</span>
+         </Online>
+
+         <Offline>
+         <span className='text-danger'>Offline - Peticiones serán guardadas</span>
+         </Offline>
 
          <button className="btn btn-outline-danger" onClick={startLogout}>
             <i className="fas fa-sign-out-alt"></i>
